@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task-1</title>
+<h1><center>Registration Form</center></h1>
+<style>
+    tr {
+      height:40px;
+    }
+    body{
+      background-image: url('students.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+</style>
+</head>
+<body>
+<form id="registrationForm">
+<table border="0" align="center">
+<tr>
+<td>Firstname:</td>
+<td><input type="text" name="fname" id="fname"/></td>
+</tr>
+<tr>
+<td>Lastname:</td>
+<td><input type="text" name="Lname" id="lname"/></td>
+</tr>
+<tr>
+<td>Roll No:</td>
+<td><input type="text" name="Number" id="rollNo"/></td>
+</tr>
+<tr>
+<td>Email:</td>
+<td><input type="email" name="mailid" id="email"/></td>
+</tr>
+<tr>
+<td>College:</td>
+<td><input type="text" name="college" id="college"/></td>
+</tr>
+<tr>
+<td>Stream:</td>
+<td><input type="radio" name="stream" value="BE" id="streamBE"/> BE
+<input type="radio" name="stream" value="BTECH" id="streamBTECH"/> BTECH
+</td></tr>
+<tr>
+<td>Branch:</td>
+<td><select id="branch">  
+<option value="Select">Select</option>  
+<option value="CSE">CSE</option>  
+<option value="ECE">ECE</option>  
+<option value="IT">IT</option>  
+<option value="CSBS">CSBS</option>  
+<option value="CT">CT</option>  
+<option value="EEE">EEE</option>
+<option value="AIML">AIML</option>
+<option value="ISE">ISE</option>
+</select></td>
+</tr>
+<tr>
+<td>Gender:</td>
+<td><input type="radio" name="gender" value="Male" id="genderMale"/> Male 
+<input type="radio" name="gender" value="Female" id="genderFemale"/> Female
+</td>
+</tr>
+<tr>
+<td>Phone:</td>
+<td><input type="number" name="phone" id="phone"/></td>
+</tr>
+<tr>
+<td>Date of Birth:</td>
+<td><input type="date" name="DOB" id="dob"/></td>
+</tr>
+<tr>
+<td>Languages Known:</td>
+<td><input type="checkbox" name="languages" value="C" id="langC"/> C
+<input type="checkbox" name="languages" value="C++" id="langCpp"/> C++
+<input type="checkbox" name="languages" value="Java" id="langJava"/> Java
+<input type="checkbox" name="languages" value="Python" id="langPython"/> Python
+</td>
+</tr>
+<tr>
+<td>Password:</td>
+<td><input type="password" name="password" id="password"/></td>
+</tr>
+<tr>
+<td>Confirm password:</td>
+<td><input type="password" name="confirmPassword" id="confirmPassword"/></td>
+</tr>
+<tr>
+<td align="right"><input type="button" value="Submit" onclick="submitForm()"></td>
+<td align="left"><input type="reset" value="Reset"></td>
+</tr>
+</table>
+</form>
+
+<div id="thankYouMessage" style="display:none;">
+  <h2>Thank you for registering!</h2>
+  <p>We have received your information.</p>
+</div>
+
+<script>
+function submitForm() {
+  var formData = {
+    firstname: document.getElementById("fname").value,
+    lastname: document.getElementById("lname").value,
+    rollNo: document.getElementById("rollNo").value,
+    email: document.getElementById("email").value,
+    college: document.getElementById("college").value,
+    stream: document.querySelector('input[name="stream"]:checked').value,
+    branch: document.getElementById("branch").value,
+    gender: document.querySelector('input[name="gender"]:checked').value,
+    phone: document.getElementById("phone").value,
+    dob: document.getElementById("dob").value,
+    languages: [],
+    password: document.getElementById("password").value,
+    confirmPassword: document.getElementById("confirmPassword").value
+  };
+
+  var languages = document.getElementsByName("languages");
+  for (var i = 0; i < languages.length; i++) {
+    if (languages[i].checked) {
+      formData.languages.push(languages[i].value);
+    }
+  }
+
+  console.log(formData); // Display form values in console
+  document.getElementById("registrationForm").reset(); // Reset form fields
+  document.getElementById("registrationForm").style.display = "none"; // Hide the form
+  document.getElementById("thankYouMessage").style.display = "block"; // Show thank you message
+}
+</script>
+
+</body>
+</html>
