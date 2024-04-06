@@ -1,0 +1,59 @@
+.head1{
+    text-align: center;
+    font-size: 35px;
+    font-family: Garamond;
+    color: red;
+    background-color: black;
+    padding: 3%;
+    width: 93.5%;
+    border: 5px outset red;
+}
+
+.navi1{
+    font-family: Garamond;
+    font-size: 20px;
+    color: red;
+    background-color: black;
+    padding: 3%;
+    width: 93.5%;
+    float: left;
+    text-decoration: none;
+    border: 5px outset red;
+}
+
+.navi1 a{
+    text-decoration: none;
+    color: red;
+    padding: 14px 16px;
+}
+
+.side{
+    font-family: Garamond;
+    font-size: 20px;
+    color: red;
+    float: right;
+}
+
+.tx{
+    border: 5px outset red;
+    background-color: black;
+    font-family: Garamond;
+    color: white;
+}
+
+.min1{
+    text-align: center;
+    font-family: Garamond;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    padding: 10%;
+}
+
+footer{
+    text-align: center;
+    font-family: Garamond;
+    color: red;
+    background-color: black;
+    padding: 7%;
+    border: 5px outset red;
+}
