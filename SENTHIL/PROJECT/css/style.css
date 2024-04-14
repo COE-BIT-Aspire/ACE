@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+nav {
+  background-color: #838181;
+  padding: 10px;
+  text-align: right; /* Change text-align to left */
+}
+#heading
+{
+  text-align: right;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-left: 10px; /* Add margin-left to push "Home" link to the left */
+}
+
+.page {
+  margin: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+#registration-form
+{
+  background-image: url(images.jpg);
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+button {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.room {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.room h3 {
+  margin-top: 0;
+}
+
+.room button {
+  background-color: #28a745;
+  color: white;
+}
+
+.room button:hover {
+  background-color: #218838;
+}
