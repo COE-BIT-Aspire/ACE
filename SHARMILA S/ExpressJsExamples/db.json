@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": "f79a",
+      "username": "Sharmila",
+      "password": "sharmi",
+      "mobile": "9087654321",
+      "email": "sharmi@gmail.com"
+    },
+    {
+      "pass": "samyu123",
+      "id": "6204"
+    },
+    {
+      "id": "3e1a",
+      "username": "Sharmila",
+      "password": "sharmi",
+      "mobile": "9087654321",
+      "email": "sharmi@gmail.com",
+      "pass": "sharmila123"
+    }
+  ],
+  "products": []
+}
