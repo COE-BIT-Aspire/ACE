@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Garamond;
+            background-color: #353434;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .signup-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            font-family: garamond;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: Garamond;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-family: garamond;
+            font-size: 15px;
+        }
+        
+        button {
+            width: 50%;
+            padding: 10px;
+            background-color: #F85C70;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: garamond;
+            font-size: 17px; 
+        }
+        
+        button:hover {
+            background-color: #F85C70;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form action="index.html">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <center><button type="submit">Sign Up</button></center>
+        </form>
+    </div>
+</body>
+</html>
