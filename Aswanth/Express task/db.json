@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": "0f2b",
+      "username": "Asro",
+      "password": "4545",
+      "mobile": "6382748805",
+      "email": "aswanthramana.cs20@bitsathy.ac.in"
+    },
+    {
+      "id": "0d50",
+      "username": "Deepa",
+      "password": "1603",
+      "mobile": "9360476451",
+      "email": "deepadharshini.ig20@bitsathy.ac.in"
+    }
+  ],
+  "products": []
+}
