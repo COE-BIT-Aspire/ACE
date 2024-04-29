@@ -1,0 +1,119 @@
+.miniplayer,
+.miniplayer-portrait {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.miniplayer {
+  padding: calc(var(--main-padding) / 4);
+  width: var(--miniplayer-width);
+  height: var(--miniplayer-height);
+  right: calc(var(--main-padding) + var(--scrollbar-width));
+  background-color: var(--status-bar);
+  border-radius: var(--border-radius);
+}
+
+.miniplayer-portrait {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  right: 0;
+  background-color: var(--accent-color-light);
+  backdrop-filter: blur(100vh);
+}
+
+.miniplayer.shadow--dark {
+  box-shadow: 0 0 var(--border-radius) var(--status-bar);
+}
+
+.miniplayer .visualizer-picture,
+.miniplayer .default-picture,
+.miniplayer-portrait .visualizer-picture,
+.miniplayer-portrait .default-picture {
+  height: 100%;
+}
+
+.miniplayer .visualizer-picture,
+.miniplayer .default-picture {
+  background-color: var(--background);
+}
+
+.miniplayer .player-button {
+  margin: 0;
+}
+
+.miniplayer-portrait .player-button {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.miniplayer-portrait .player-button:focus {
+  background-color: var(--accent-color);
+}
+
+.miniplayer-portrait .player-button:hover {
+  border-color: transparent;
+}
+
+.miniplayer-portrait .player-button:first-of-type {
+  margin-left: 0;
+}
+
+.miniplayer .light-button {
+  background-color: inherit;
+}
+
+.miniplayer .light-button:hover,
+.miniplayer .light-button:focus {
+  color: var(--status-bar);
+  background-color: var(--high-emphasize);
+}
+
+.miniplayer-list {
+  display: flex;
+  transition: var(--transition);
+}
+
+.miniplayer .miniplayer-list {
+  justify-content: space-between;
+  padding: calc(var(--miniplayer-width) / (var(--miniplayer-multiplier) * 16));
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.miniplayer-portrait .miniplayer-list {
+  margin-right: calc(var(--main-padding) / 4);
+}
+
+.miniplayer-portrait .visualizer-picture,
+.miniplayer-portrait .default-picture {
+  order: 1;
+  display: flex;
+  justify-content: center;
+  padding: calc(var(--main-padding) / 4);
+  margin-right: calc(var(--font-size) * .5);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.miniplayer-portrait .visualizer-info,
+.miniplayer-portrait .playback-info {
+  margin: 0;
+  width: 100%;
+}
+
+.miniplayer-portrait .visualizer-info .content-title,
+.miniplayer-portrait .content-length {
+  display: none;
+}
+
+.miniplayer-portrait .content-note {
+  margin: 0;
+  margin-bottom: var(--font-size);
+}
