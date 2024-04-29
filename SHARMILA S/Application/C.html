@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>C Quizzzzz!</title>
+    <link rel="stylesheet" type="text/css" href="Quiz.css">
+</head>
+
+<body>
+    <style>
+        body {
+            background: #F0EBE3;
+        }
+    </style>
+    <div class=title>
+        <h1> C Quizzzzz!</h1>
+    </div>
+    <div class=questionBox>
+        <h1>1. What is the primary function of 'printf()' in C? </h1>
+        <div row>
+            <button class=button id=1C onclick="QuestOneZero();QuestOneColor()">To read input from the user</button>
+        </div>
+        <div row>
+            <button class=button id=1B onclick="QuestOneOne();QuestOneColor()"">To print output to the console</button>
+        </div>
+        <div row>
+            <button class=button id=1A onclick="QuestOneZero();QuestOneColor()">To declare variables</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>2. Which keyword is used to define a constant in C? </h1>
+        <div row>
+            <button class=button id=2A onclick="QuestTwoZero();QuestTwoColor()">var</button>
+        </div>
+        <div row>
+            <button class=button id=2B onclick="QuestTwoOne();QuestTwoColor()">const</button>
+        </div>
+        <div row>
+            <button class=button id=2C onclick="QuestTwoZero();QuestTwoColor()">define</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>3. What is the purpose of the sizeof operator in C? </h1>
+        <div row>
+            <button class=button id=3B onclick="QuestThreeOne();QuestThreeColor()">To determine the size of a variable or data type</button>
+        </div>
+        <div row>
+            <button class=button id=3A onclick="QuestThreeZero();QuestThreeColor()">To perform mathematical calculations</button>
+        </div>
+        <div row>
+            <button class=button id=3C onclick="QuestThreeZero();QuestThreeColor()">To compare two variables</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>4. Which of the following data types is used to store single characters in C? </h1>
+        <div row>
+            <button class=button id=4A onclick="QuestFourZero();QuestFourColor()">int</button>
+        </div>
+        <div row>
+            <button class=button id=4B onclick="QuestFourOne();QuestFourColor()">char</button>
+        </div>
+        <div row>
+            <button class=button id=4C onclick="QuestFourZero();QuestFourColor()">float</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>5. In C programming, what is the syntax for a single-line comment? </h1>
+        <div row>
+            <button class=button id=5B onclick="QuestFiveOne();QuestFiveColor()">// comment</button>
+        </div>
+        <div row>
+            <button class=button id=5C onclick="QuestFiveZero();QuestFiveColor()">/* comment */</button>
+        </div>
+        <div row>
+            <button class=button id=5A onclick="QuestFiveZero();QuestFiveColor()"># comment</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>6. How do you declare a variable in C to store whole numbers? </h1>
+        <div row>
+            <button class=button id=6A onclick="QuestSixZero();QuestSixColor()">char</button>
+        </div>
+        <div row>
+            <button class=button id=6C onclick="QuestSixZero();QuestSixColor()">float</button>
+        </div>
+        <div row>
+            <button class=button id=6B onclick="QuestSixOne();QuestSixColor()">int</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>7. Which operator is used to access the value stored at a particular memory address in C? </h1>
+        <div row>
+            <button class=button id=7B onclick="QuestSevenOne();QuestSevenColor()">*</button>
+        </div>
+        <div row>
+            <button class=button id=7C onclick="QuestSevenZero();QuestSevenColor()">&</button>
+        </div>
+        <div row>
+            <button class=button id=7A onclick="QuestSevenZero();QuestSevenColor()">/</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>8. What is the purpose of the 'scanf()' function in C? </h1>
+        <div row>
+            <button class=button id=8A onclick="QuestEightZero();QuestEightColor()">To print output to the console</button>
+        </div>
+        <div row>
+            <button class=button id=8B onclick="QuestEightOne();QuestEightColor()">To read input from the user</button>
+        </div>
+        <div row>
+            <button class=button id=8C onclick="QuestEightZero();QuestEightColor()">To perform mathematical calculations</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>9. Which loop in C is executed at least once? </h1>
+        <div row>
+            <button class=button id=9A onclick="QuestNineZero();QuestNineColor()">for loop</button>
+        </div>
+        <div row>
+            <button class=button id=9C onclick="QuestNineZero();QuestNineColor()">while loop</button>
+        </div>
+        <div row>
+            <button class=button id=9B onclick="QuestNineOne();QuestNineColor()">do-while loop</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>10. How do you terminate a switch statement in C? </h1>
+        <div row>
+            <button class=button id=10B onclick="QuestTenOne();QuestTenColor()">break</button>
+        </div>
+        <div row>
+            <button class=button id=10A onclick="QuestTenZero();QuestTenColor()">continue</button>
+        </div>
+        <div row>
+            <button class=button id=10C onclick="QuestTenZero();QuestTenColor()">return</button>
+        </div>
+    </div>
+    
+    <div class=final>
+        <button id=Submit onclick="result();SubmitColor()">Submit</button>
+    </div>
+    <script src="Quiz.js"></script>
+</body>
+
+</html>

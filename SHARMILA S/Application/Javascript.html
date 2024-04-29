@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Quizzzzz!</title>
+    <link rel="stylesheet" type="text/css" href="Quiz.css">
+</head>
+
+<body>
+    <style>
+        body {
+            background: #F0EBE3;
+        }
+    </style>
+    <div class=title>
+        <h1> Javascript Quizzzzz!</h1>
+    </div>
+    <div class=questionBox>
+        <h1>1. What keyword is used to declare a variable in JavaScript? </h1>
+        <div row>
+            <button class=button id=1B onclick="QuestOneOne();QuestOneColor()">var</button>
+        </div>
+        <div row>
+            <button class=button id=1A onclick="QuestOneZero();QuestOneColor()">int</button>
+        </div>
+        <div row>
+            <button class=button id=1C onclick="QuestOneZero();QuestOneColor()">let</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>2. Which function is used to display a message in a popup dialog box in JavaScript? </h1>
+        <div row>
+            <button class=button id=2C onclick="QuestTwoZero();QuestTwoColor()">console.log()
+            </button>
+        </div>
+        <div row>
+            <button class=button id=2B onclick="QuestTwoOne();QuestTwoColor()">alert()</button>
+        </div>
+        <div row>
+            <button class=button id=2A onclick="QuestTwoZero();QuestTwoColor()">prompt()</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>3. What is the correct way to write a comment in JavaScript?</h1>
+        <div row>
+            <button class=button id=3B onclick="QuestThreeOne();QuestThreeColor()">//This is a comment</button>
+        </div>
+        <div row>
+            <button class=button id=3C onclick="QuestThreeZero();QuestThreeColor()">< !--This is a comment-- ></button>
+        </div>
+        <div row>
+            <button class=button id=3A onclick="QuestThreeZero();QuestThreeColor()">/This is a comment/</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>4. Which operator is used to concatenate strings in JavaScript? </h1>
+        <div row>
+            <button class=button id=4B onclick="QuestFourOne();QuestFourColor()">+</button>
+        </div>
+        <div row>
+            <button class=button id=4A onclick="QuestFourZero();QuestFourColor()">&</button>
+        </div>
+        <div row>
+            <button class=button id=4C onclick="QuestFourZero();QuestFourColor()">/</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>5. How do you define a function in JavaScript? </h1>
+        <div row>
+            <button class=button id=5B onclick="QuestFiveOne();QuestFiveColor()">function myFunction()</button>
+        </div>
+        <div row>
+            <button class=button id=5C onclick="QuestFiveZero();QuestFiveColor()">def myFunction()</button>
+        </div>
+        <div row>
+            <button class=button id=5A onclick="QuestFiveZero();QuestFiveColor()">func myFunction()</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>6. What is the result of 10 % 3 in JavaScript?? </h1>
+        <div row>
+            <button class=button id=6B onclick="QuestSixOne();QuestSixColor()">1</button>
+        </div>
+        <div row>
+            <button class=button id=6A onclick="QuestSixZero();QuestSixColor()">3</button>
+        </div>
+        <div row>
+            <button class=button id=6C onclick="QuestSixZero();QuestSixColor()">0</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>7. Which method is used to remove the last element of an array in JavaScript? </h1>
+        <div row>
+            <button class=button id=7B onclick="QuestSevenOne();QuestSevenColor()">pop()</button>
+        </div>
+        <div row>
+            <button class=button id=7A onclick="QuestSevenZero();QuestSevenColor()">push()</button>
+        </div>
+        <div row>
+            <button class=button id=7C onclick="QuestSevenZero();QuestSevenColor()">remove()</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>8. How do you access the third element of an array named 'myArray' in JavaScript? </h1>
+        <div row>
+            <button class=button id=8B onclick="QuestEightOne();QuestEightColor()">myArray[2]</button>
+        </div>
+        <div row>
+            <button class=button id=8A onclick="QuestEightZero();QuestEightColor()">myArray[3]</button>
+        </div>
+        <div row>
+            <button class=button id=8C onclick="QuestEightZero();QuestEightColor()"> myArray(3)</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>9. What is the result of "5" + 3 in JavaScript? </h1>
+        <div row>
+            <button class=button id=9A onclick="QuestNineZero();QuestNineColor()">8</button>
+        </div>
+        <div row>
+            <button class=button id=9B onclick="QuestNineOne();QuestNineColor()">53</button>
+        </div>
+        <div row>
+            <button class=button id=9C onclick="QuestNineZero();QuestNineColor()">35</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>10. Which method is used to find the length of a string in JavaScript? </h1>
+        <div row>
+            <button class=button id=10A onclick="QuestTenZero();QuestTenColor()">length()</button>
+        </div>
+        <div row>
+            <button class=button id=10C onclick="QuestTenZero();QuestTenColor()">size()</button>
+        </div>
+        <div row>
+            <button class=button id=10B onclick="QuestTenOne();QuestTenColor()">length</button>
+        </div>
+    </div>
+    
+    <div class=final>
+        <button id=Submit onclick="result();SubmitColor()">Submit</button>
+    </div>
+    <script src="Quiz.js"></script>
+</body>
+
+</html>

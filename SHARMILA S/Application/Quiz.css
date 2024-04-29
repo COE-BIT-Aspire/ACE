@@ -1,0 +1,84 @@
+#subject {
+    background-color: #1f2847;
+    border: none;
+    color: white;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    margin: 5px 5px;
+    cursor: pointer;
+    width: 80%;
+}
+
+.button {
+    background-color: #474F7A;
+    border: none;
+    color: #EEEDEB;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 5px 5px;
+    cursor: pointer;
+    width: 30%;
+}
+
+#Submit {
+    background-color: #1F2544;
+    border: none;
+    color: yellow;
+    padding: 25px 50px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 5px 5px;
+    cursor: pointer;
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+
+.button:hover {
+    background-color: #6962AD;
+    color: white;
+}
+
+#subject:hover {
+    background-color: #3C5B6F;
+    color: white;
+}
+
+.title {
+    background-color: none;
+    border: none;
+    color: darkmagenta;
+    text-align: center;
+    text-decoration: none;
+    font-size: 35px;
+    margin: 1px 1px;
+    margin-bottom: -20px;
+}
+
+.questionBox {
+    background-color: none;
+    border: none;
+    color: #153448;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 1px 1px;
+    margin-bottom: -20px;
+    margin-left: 20px;
+    /*text-align: center;*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.topics {
+    position: fixed;
+    margin-left: 37%;
+    margin-top: 2px;
+    margin-right: 500px;
+    width: 30%;
+}

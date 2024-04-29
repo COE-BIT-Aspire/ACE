@@ -1,0 +1,53 @@
+body {
+    background-image: url('background_img.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-container input[type="submit"] {
+    background-color: #86469C;
+    color: white;
+    cursor: pointer;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: purples;
+}
+
+.form-container .signup-link {
+    text-align: center;
+    margin-top: 10px;
+}

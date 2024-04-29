@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>C++ Quizzzzz!</title>
+    <link rel="stylesheet" type="text/css" href="Quiz.css">
+</head>
+
+<body>
+    <style>
+        body {
+            background: #F0EBE3;
+        }
+    </style>
+    <div class=title>
+        <h1> C++ Quizzzzz!</h1>
+    </div>
+    <div class=questionBox>
+        <h1>1. What symbol is used to denote a single-line comment in C++? </h1>
+        <div row>
+            <button class=button id=1B onclick="QuestOneOne();QuestOneColor()">//</button>
+        </div>
+        <div row>
+            <button class=button id=1A onclick="QuestOneZero();QuestOneColor()">/*</button>
+        </div>
+        <div row>
+            <button class=button id=1C onclick="QuestOneZero();QuestOneColor()">##</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>2. Which keyword is used to declare a class in C++? </h1>
+        <div row>
+            <button class=button id=2B onclick="QuestTwoOne();QuestTwoColor()">class</button>
+        </div>
+        <div row>
+            <button class=button id=2C onclick="QuestTwoZero();QuestTwoColor()">struct</button>
+        </div>
+        <div row>
+            <button class=button id=2A onclick="QuestTwoZero();QuestTwoColor()">object</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>3. Which data type is used to store integer numbers in C++?</h1>
+        <div row>
+            <button class=button id=3A onclick="QuestThreeZero();QuestThreeColor()">char</button>
+        </div>
+        <div row>
+            <button class=button id=3C onclick="QuestThreeZero();QuestThreeColor()">float</button>
+        </div>
+        <div row>
+            <button class=button id=3B onclick="QuestThreeOne();QuestThreeColor()">int</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>4. What is the output of the following code snippet: 'cout << (5 + 3 * 2);'? </h1>
+        <div row>
+            <button class=button id=4A onclick="QuestFourZero();QuestFourColor()">16</button>
+        </div>
+        <div row>
+            <button class=button id=4B onclick="QuestFourOne();QuestFourColor()">11</button>
+        </div>
+        <div row>
+            <button class=button id=4C onclick="QuestFourZero();QuestFourColor()">13</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>5. How do you declare a constant in C++? </h1>
+        <div row>
+            <button class=button id=5A onclick="QuestFiveZero();QuestFiveColor()">define</button>
+        </div>
+        <div row>
+            <button class=button id=5B onclick="QuestFiveOne();QuestFiveColor()">const</button>
+        </div>
+        <div row>
+            <button class=button id=5C onclick="QuestFiveZero();QuestFiveColor()">constant</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>6. Which operator is used for comparing two values in C++? </h1>
+        <div row>
+            <button class=button id=6A onclick="QuestSixZero();QuestSixColor()">=</button>
+        </div>
+        <div row>
+            <button class=button id=6B onclick="QuestSixOne();QuestSixColor()">==</button>
+        </div>
+        <div row>
+            <button class=button id=6C onclick="QuestSixZero();QuestSixColor()">:=</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>7. What is the purpose of the 'cin' object in C++? </h1>
+        <div row>
+            <button class=button id=7A onclick="QuestSevenZero();QuestSevenColor()">To print output to the console</button>
+        </div>
+        <div row>
+            <button class=button id=7B onclick="QuestSevenOne();QuestSevenColor()">To read input from the user</button>
+        </div>
+        <div row>
+            <button class=button id=7C onclick="QuestSevenZero();QuestSevenColor()">To perform mathematical calculations</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>8. Which loop in C++ executes its body as long as the condition is true? </h1>
+        <div row>
+            <button class=button id=8A onclick="QuestEightZero();QuestEightColor()">for loop</button>
+        </div>
+        <div row>
+            <button class=button id=8B onclick="QuestEightOne();QuestEightColor()">while loop</button>
+        </div>
+        <div row>
+            <button class=button id=8C onclick="QuestEightZero();QuestEightColor()">do-while loop</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>9. How do you access the value stored at a particular memory address in C++? </h1>
+        <div row>
+            <button class=button id=9A onclick="QuestNineZero();QuestNineColor()">&</button>
+        </div>
+        <div row>
+            <button class=button id=9B onclick="QuestNineOne();QuestNineColor()">*</button>
+        </div>
+        <div row>
+            <button class=button id=9C onclick="QuestNineZero();QuestNineColor()">/</button>
+        </div>
+    </div>
+    <div class=questionBox>
+        <h1>10. What is the keyword used to terminate a loop iteration in C++? </h1>
+        <div row>
+            <button class=button id=10A onclick="QuestTenZero();QuestTenColor()">stop</button>
+        </div>
+        <div row>
+            <button class=button id=10C onclick="QuestTenZero();QuestTenColor()">exit</button>
+        </div>
+        <div row>
+            <button class=button id=10B onclick="QuestTenOne();QuestTenColor()">break</button>
+        </div>
+    </div>
+    
+    <div class=final>
+        <button id=Submit onclick="result();SubmitColor()">Submit</button>
+    </div>
+    <script src="Quiz.js"></script>
+</body>
+
+</html>
