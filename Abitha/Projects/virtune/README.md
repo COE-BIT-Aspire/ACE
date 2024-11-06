@@ -1,2 +1,0 @@
-# Virtune
-Virtune is an online music player. The current version is a prototype version. This version includes four playlist samples, playback control, interval setter, audio waveform, volume control, and mini player. App's future developments will bring more features, i.e., playlist add button, playlist edit options, equalizer, search menu, and account.
