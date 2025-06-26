@@ -1,0 +1,147 @@
+1. what is collections and what is it used for? collection is a combination of different types of containers
+
+2. Available containers,
+
+	1. Set - Doesn't allow duplicates
+
+		1. Hashset - No proper order,
+		2. Treeset - Proper order.
+	
+	2. List - Allow duplicates, proper order
+		
+		1. ArrayList
+		2. LinkedList
+
+	3. Stack - Last in first out or First in last out (eg. Bank statements)
+
+	4. Queue - First in first out or Last in last out
+
+	5. Map - key value pair
+
+		1.HashMap
+		2.TreeMap
+
+	6. Vector - Size is not defenite can be increased
+
+retainAll()
+
+clear()
+
+set()
+get()
+indexOf()
+listIterator()
+lastIndexOf()
+subList()
+sort()
+
+add() -- will return exception if couldn't add
+offer() -- return boolean value for the operation
+remove() -- for removing values
+poll() -- for removing values
+peek()
+
+size()
+isEmpty()
+put(key,value)
+get(key)
+remove(key)
+entrySet()=key,value
+keySet()=key
+values()
+putAll()
+clear()
+replace()
+putIfAbsent()
+
+
+add():
+
+set.add(1); --> set.add(new Integer(1))
+set.add(null); --> cant add another null value continuous null values will be considered as one.
+
+iterator:
+
+Iterator it = set.iterator();
+
+while(it.hasNext()){ --> checks if it has value to provide
+sout(it.next()); --> then it will print the value
+}
+
+generics --> to avoid datatype mismatch we go for generics
+set<Integer> set = new HashSet<Integer>(); --> this will allow only integer data.
+
+
+to check an element in the set
+Set set = new HashSet();
+set.add(2); 
+set.add(3); 
+set.add(4); 
+set.add(5); 
+set.add(6); 
+set.add(7); 
+
+int value = set.indexOf(5);
+
+LinkedList:
+ListIterator it = set.ListIterator();
+
+while(it.hasPrevious()){ --> checks if it has value to provide
+sout(it.previous()); --> then it will print the value
+}
+
+map:
+Map map = new HashMap();
+map.put("0","india");
+map.put("+91","india");
+map.put("64","australia");
+map.put("64","aus"); --> value will be overriden sice the keys cant be duplicated
+
+map.keySet(); --> print only keys
+map.values(); --> print only values
+map.entrySet(); --> print both key and values - 0=india
+
+Queue:
+class set{
+    public static void main(String[] a){
+        Queue<Integer> number = new LinkedList();
+        number.offer(1);
+        number.offer(2);
+        number.offer(3);
+        System.out.println(number);
+
+        int removeNumber = number.poll(); -- deQueue
+        System.out.println(removeNumber);
+    }
+}
+
+
+Stack:
+class set{
+public static void main(String[] a){
+
+Stack<String> employee = new Stack<String>():
+employee.push("thianesh");
+employee.push("senthil");
+employee.push("aswanth"); -- aswanth will be popped
+
+employee.pop();
+}
+}
+
+
+Vector:
+It is synchronous. It is a stopping code. If tried to access another change simultaneously it throw ConcurrentModificationException.
+
+class set{
+public static void main(String[] a){
+
+Vector<String> employee = new Vector<String>():
+employee.add("thianesh");
+employee.add("senthil");
+employee.add("aswanth");
+
+employee.add(1,"sujith"); // adding values to specific index is possible
+employee.remove("aswanth"); //to remove values
+}
+}

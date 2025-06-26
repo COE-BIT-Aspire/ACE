@@ -1,0 +1,117 @@
+PL/SQL:
+
+TO_DATE -------> it is a default function
+DBMS_OUTPUT.PUT_LINE --------> used to print something like cout in c++
+
+PL/SQL has 3 blocks declaration, execution and exception handling.
+	Declaration and exception handling is not necessary while execution is compulsory.
+
+Procedure doesn't return data while functions return data.
+
+Anonymous block and Named block are the 2 blocks in pl/sql. Anonymous block doesn't store in databases and can be used only once whereas named blocks store data's in database and can be reused anytime.
+
+
+
+CREATE OR REPLACE PROCEDURE user_id(P_ID IN EMPLOYEES.EMP_ID%TYPE) AS P_NAME EMPLOYEES.EMP_NAME%TYPE
+BEGIN
+SELECT EMP_NAME INTO P_NAME FROM EMPLOYEES WHERE USER_ID=P_ID
+DBMS_OUTPUT.PUT_LINE('The emp name is ' || P_NAME);
+END;
+
+BEGIN
+user_id(10);
+END;
+		
+		--------------------------------> THIS CODE JUST PRINTS THE DETAILS OF USER_ID=10
+
+
+CREATE TABLE EMPLOYEE
+(
+    ID INTEGER PRIMARY KEY,
+    NAME VARCHAR(50),
+    SALARY INTEGER,
+    DEPT VARCHAR(10),
+    DOJ DATE
+);
+
+INSERT INTO EMPLOYEE (ID, NAME, SALARY, DEPT, DOJ) VALUES (1, 'Aswanth', 50000, 'CSE', TO_DATE('2024-03-15', 'YYYY-MM-DD'));
+INSERT INTO EMPLOYEE (ID, NAME, SALARY, DEPT, DOJ) VALUES (2, 'Deepa', 55000, 'ISE', TO_DATE('2024-04-16', 'YYYY-MM-DD'));
+INSERT INTO EMPLOYEE (ID, NAME, SALARY, DEPT, DOJ) VALUES (3, 'Amit Sharma', 50000, 'IT', TO_DATE('2023-01-15', 'YYYY-MM-DD'));
+INSERT INTO EMPLOYEE (ID, NAME, SALARY, DEPT, DOJ) VALUES (4, 'Priya Patel', 55000, 'HR', TO_DATE('2022-07-22', 'YYYY-MM-DD'));
+INSERT INTO EMPLOYEE (ID, NAME, SALARY, DEPT, DOJ) VALUES (5, 'Rajesh Gupta', 60000, 'Finance', TO_DATE('2021-11-30', 'YYYY-MM-DD'));
+INSERT INTO EMPLOYEE (ID, NAME, SALARY, DEPT, DOJ) VALUES (6, 'Sneha Verma', 52000, 'IT', TO_DATE('2022-05-10', 'YYYY-MM-DD'));
+INSERT INTO EMPLOYEE (ID, NAME, SALARY, DEPT, DOJ) VALUES (7, 'Vikram Singh', 65000, 'Sales', TO_DATE('2023-03-15', 'YYYY-MM-DD'));
+INSERT INTO EMPLOYEE (ID, NAME, SALARY, DEPT, DOJ) VALUES (8, 'Neha Joshi', 48000, 'Marketing', TO_DATE('2021-08-20', 'YYYY-MM-DD'));
+INSERT INTO EMPLOYEE (ID, NAME, SALARY, DEPT, DOJ) VALUES (9, 'Ravi Kumar', 70000, 'IT', TO_DATE('2022-02-25', 'YYYY-MM-DD'));
+INSERT INTO EMPLOYEE (ID, NAME, SALARY, DEPT, DOJ) VALUES (10, 'Anjali Sharma', 53000, 'HR', TO_DATE('2022-09-12', 'YYYY-MM-DD'));
+INSERT INTO EMPLOYEE (ID, NAME, SALARY, DEPT, DOJ) VALUES (11, 'Rahul Mehta', 56000, 'Finance', TO_DATE('2021-12-01', 'YYYY-MM-DD'));
+
+CREATE OR REPLACE PROCEDURE user_id (p_id IN EMPLOYEE.ID%TYPE) AS
+p_name EMPLOYEE.NAME%TYPE;
+BEGIN
+SELECT NAME INTO P_NAME FROM EMPLOYEE WHERE ID=P_ID;
+DBMS_OUTPUT.PUT_LINE('The employee name is ' || p_name);
+END;
+
+
+BEGIN
+user_id(2);
+END;
+
+CREATE OR REPLACE PROCEDURE printing (p_dept in EMPLOYEE.DEPT%type) AS
+P_NAME EMPLOYEE.NAME%TYPE;
+CURSOR p_cursor is
+	SELECT NAME FROM EMPLOYEE WHERE DEPT=P_DEPT;
+BEGIN
+    OPEN p_cursor;
+    	LOOP
+    		FETCH p_cursor into p_name;
+    		EXIT WHEN p_cursor%NOTFOUND;
+			DBMS_OUTPUT.PUT_LINE('The employee name is ' || p_name);
+    	END LOOP;
+    CLOSE p_cursor;
+	EXCEPTION
+        WHEN OTHERS THEN 
+        	DBMS_OUTPUT.PUT_LINE('An error occurred: ' || SQLERRM);
+END;
+
+BEGIN
+    printing('IT');
+END;
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+CREATE TABLE EMPLOYEES (
+    ID INT,
+    NAME VARCHAR(20),
+    SALARY VARCHAR(20),
+    DEPT VARCHAR(20),
+    DOB DATE
+);
+
+CREATE OR REPLACE PROCEDURE retrive (
+    id IN NUMBER,
+    name IN VARCHAR,
+    salary IN VARCHAR
+) IS 
+BEGIN
+    INSERT INTO EMPLOYEES(ID, NAME, SALARY) 
+    VALUES (id, name, salary);
+	COMMIT;
+	DBMS_OUTPUT.PUT_LINE('The id ' ||id|| 'and his name is ' ||name|| ' and his salry is ' ||salary);
+END;
+
+BEGIN
+    retrive(1, 'Aswanth', 45000);
+	retrive(2, 'Sujeeth', 45000);
+END;
+
+
+
+
+
+
+
+

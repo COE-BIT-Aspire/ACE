@@ -1,0 +1,35 @@
+EXPRESS:
+
+express is used to create api
+express is a framework which used to connect frontend to backend
+
+
+Multiple Route Parameters:
+
+app.get('/users/:userId/posts/:postId')
+const userId = req.params.userId;
+const postId = req.params.postId;
+
+
+/users/143/posts/123
+
+output:
+userId = 143
+postId = 123
+
+Optional Route Parameters:
+
+app.get('/users/:userId/posts/:postId?')
+const userId = req.params.userId;
+const postId = req.params.postId;
+
+
+/users/143/posts
+
+output:
+userId = 143
+
+It doesn't give error because if "?" used it is not compulsory if the id is not there. 
+
+
+cors() ----------> it is used to run when data is passed from one port to another port without any changes 		   tor error

@@ -1,0 +1,32 @@
+SDLC:
+1. Requirement Phase:
+      Gather the details from the clients and gather the requirements according to it. 
+
+      It has 2 types of requirements (1) Functional Requirements (2) Non Functional Requirements
+                 (1)Functional Requirements - What the system should do - "User can log in", "Admin can add
+                                                                                                 a product"
+                 (2)Non-Functional Requirements - How the system should be - "Should load in 2 seconds",
+                                                                             "Must be secure", "Should
+                                                                              support 1 million users"  
+
+      Key People Involved:
+         Business Analyst (BA) - The main person collecting and documenting requirements
+         Client / Stakeholder - The person or group who needs the software
+         Project Manager (PM) - Ensures requirement phase sticks to time/budget
+
+      SRS(Software Requirements Specification) plays a key role in this phase and it acts like a blueprint.
+      It documents everything and helps to create a overview of the system. It contains diagrams like class
+      diagram, usecase diagram,  sequence diagram. It acts as the single source of truth for developers,
+      testers, designers and stakeholders. 
+ 
+      Final Summary:
+      Phase Name ----> Requirement Gathering and Analysis
+      Goal ----> Understand and document what the software should do
+      People Involved ----> Client, Business Analyst, PM, Devs, QA
+      Techniques Used ----> Interviews, Surveys, Observations, Prototypes, Use Cases
+      Tools Used ----> Google Forms, Figma, Lucidchart, MS Word, Excel
+      Output Docs ----> SRS, BRD, Use Case Diagram, RTM
+      Importance ----> Lays the foundation for success or failure of the project
+
+2. Planning:
+      

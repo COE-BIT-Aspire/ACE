@@ -1,0 +1,30 @@
+MongoDb is a NoSQL(non-relational) database designed to store and manage large volumes of data in a flexible and scalable manner. 
+It stores data in json format. 
+It has unstructured data storage. 
+It stores data in document oriented form because it uses key value format but the value type may change.
+Data retrieval is faster in mangodb because it uses indexes to fetch data. Indexes can either be used by us or it can be declared by mangodb.
+
+
+show dbs -------------------------> zto show all the databases in the server
+use student -------------------------> 
+db.createCollection('First_yr') -------------------------> 
+db.First_yr.insertOne({id:1, name: 'Asro'}) -------------------------> for adding a single set of data in a collection
+
+db.First_yr.find() ------------------------> to show all the data in a collection
+db.First_yr.find().limit(2) ---------------> to show the first 2 data in the collection
+db.First_yr.find().skip(2) ---------------> to just show the remaining data except first 2
+db.First_yr.find().sort({name:1}) ---------> sort the data in alphabetical order
+db.First_yr.find().sort({name:-1}) ---------> sort the data reverse of alphabetical order
+db.First_yr.find({name:'asro'}, {name:1, _id:0})
+db.First_yr.find({id:{$exists:true}}) ---------> gives us the data that has id
+db.First_yr.find({id:{$exists:false}})---------> gives us the data that doesn't have id
+
+gt ------> greater than
+gte ------> greater than and equal to 
+lt ------> lesser than
+lte ------> lesser than and equal to 
+eq ------> equal to
+nq ------> not equal to
+in ------> include
+nin ------> not include
+

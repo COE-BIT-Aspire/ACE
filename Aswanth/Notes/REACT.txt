@@ -1,0 +1,73 @@
+REACT:
+
+React is a open source library.
+It is JSX
+Virtual DOM
+One way data binding
+Class component is slower than functional component because we manually binding 'this' keyword in class component.
+Functional Component does not has render() whereas in class component it has render().
+
+1) HOC:
+	A Higher-Order Component (HOC) is a design pattern in React for reusing component logic. Technically, an HOC is a function that takes a component as an argument and returns a new component that wraps the original one.
+
+	const higherOrderComponent = (WrappedComponent) => {
+  	// Return a new component
+  	 return function EnhancedComponent(props) {
+  	// You can add additional logic here
+    	    return <WrappedComponent {...props} />;
+  	  };
+	};
+ 
+Here's what happens:
+WrappedComponet: This is the component you pass to the HOC.
+	Here’s what happens:
+	WrappedComponent: This is the component you pass to the HOC. It's the component that will be enhanced or extended.
+	EnhancedComponent: This is the new component returned by the HOC. It can add extra functionality to the original WrappedComponent.
+
+	How HOCs Work:
+		HOCs are pure functions: They do not modify the input component. Instead, they create a new component that renders the input component with additional props or behaviors.
+
+2) hooks ------> useState(), useEffect(), useRef()
+3) Controlled form ------> stores data  
+   Uncontrolled form -----> doesn't store the data instead directly display's it
+
+4) Router: Wraps your entire application to enable routing, keeping track of the current URL.
+Routes: Replaces Switch in v6+, rendering the first matching Route for the current URL.
+Route: Defines individual paths and the components that should render for each path.4
+
+	<Router>
+		<Link to="/about">About</Link> -----------> here we declare the path
+		<Routes>
+			<Route path.....></Route> ------------> here we initialize the path
+		</Routes>
+	</Router>
+
+5) useReducer()
+	The useReducer hook is a React hook that provides an alternative to the useState hook, particularly useful when the state logic in a component is more complex and involves multiple related state variables or when the next state depends on the previous one.
+
+6) React life cycle has 3 phases
+	mounting --------> componentDidMount
+	updating --------> componentDidUpdate
+	unmounting ------> componentWillUnmount
+
+7) Deepcopy:
+	It is a copy method where an array is copied into another array. In this method if we change anything in the duplicate it does not change in the original one.
+
+   Shallowcopy:
+	It is a copy method where the location of the nested array is copied like pointer. So if anything in the nested array changes it directly changes in the original one because the location of the array is copied like pointer.
+
+In technical terms:
+	Shallow Copy: Copies the top-level properties and references to nested objects. Use when you don't need to modify nested structures.
+	Deep Copy: Recursively copies all properties and nested structures. Use when you need a completely independent copy of the object or array.
+
+
+8) Props:
+	Props are the input to a component, which allow us to pass data from one component to another component. 
+
+		function Welcome(props) {
+  			return <h1>Hello, {props.name}!</h1>;
+		}
+
+		<Welcome name="Alice" />
+
+

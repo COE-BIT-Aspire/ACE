@@ -1,0 +1,142 @@
+ANGULAR
+=======
+
+1.
+Angular is a front end web framework by google. The thing is Angular is a Framework.
+Angular is written in typescript which is the superset of javascript.
+
+2.
+NgModule --> A big folder manager that organizes your app's parts (components, pipes, services, etc.) and tells Angular what belongs where. In old Angular style, every component had to be registered inside a
+module.
+
+Standalone Component --> A self-contained file that doesn't need to be part of any big folder or group (NgModule). With Angular 14+, you can now skip modules and make just components that import what they need on their own.
+
+
+Feature	------------ NgModule (Old Way) ------------------------ Standalone Component (New Way)
+Setup	      Needs a module file (e.g., app.module.ts)	             No module needed
+Imports	             Done in @NgModule	                         Done directly in @Component
+Bootstrapping	      Via AppModule	                      Directly via bootstrapApplication()
+Use case    Good for large apps with many shared pieces	   Great for small apps, faster setups, modern code
+Extra files	          Yes	                                       No extra files needed
+
+3.
+Bootstrap --> It tells angular where to start the app.
+When Angular runs, it needs to know:
+                * Which component to load first
+                * Where to attach that component in the HTML (index.html)
+So you need to bootstrap (launch) your root component, which is usually AppComponent.
+
+In standalone Component, it just need to be declared in main.ts like this:
+	import { bootstrapApplication } from '@angular/platform-browser';
+	import { App } from './app/app';
+	bootstrapApplication(App);
+
+In ngModule it need to be declared in main.ts via AppModule. 
+In AppModule it is declared like this:
+	@NgModule({
+	  declarations: [AppComponent],
+	  bootstrap: [AppComponent]
+	})                        
+whereas, in main.ts: 
+platformBrowserDynamic().bootstrapModule(AppModule)
+
+Simply we can say, in case of standalone bootstrap can be declared in main.ts alone and say to angular that start with App and use index.html as base whereas in ngmodule, bootstrap needs to be declared in Appmodule in app.module.ts file and in main.ts file and inform angular that App is the root component.
+
+4.
+Selectors --> It is a custom html tag defined in a component which can be used in other components.
+In app.ts:
+	@Component({
+	  selector: 'app-root',
+	  ...
+	})
+This means we can now use this component anywhere by writing <app-root></app-root> in html. So, when angular sees <app-root>, it would render root component in that spot.
+
+In short, selector is a custom html tag that we assign in a component, which lets us insert that component inside other component.
+ 
+
+5.
+Decorators --> Decorators are special instruction written with @ that tell Angular how to treat a class or property. 
+
+	@Component({
+	  selector: 'app-root',
+	  standalone: true,
+	  imports: [Hello],
+	  templateUrl: './app.html',
+	  styleUrls: ['./app.css']
+	})
+	export class App { ... }
+
+@component - It is a class decorator. It tells angular that this class (app) is a component with selector, templates, styles etc..
+
+| Decorator       | Use Case                       | 
+| --------------- | ------------------------------ | 
+| @Component      | Defines a component            | 
+| @NgModule       | Defines a module               | 
+| @Input()        | Accept data into a component   | 
+| @Output()       | Emit data out from a component | 
+| @Injectable()   | Marks a class as a service     | 
+| @Directive()    | For creating custom behavior   | 
+| @Pipe()         | For custom data transformation | 
+
+In short, decorators are a special instruction that adds metadata to a class/property which starts with @, like @component, @input and they used for defining components, modules, services etc..
+
+6.
+Data Binding --> Data binding means connecting the typescript code (logic) with html (ui). There are 4 different bindings in angular
+               (i) Interpolation   --> Shows data in the UI   --> {{name}}
+               (ii) Property Binding   --> Bind html attributes to data   --> [property]="data"
+               (iii) Event Binding   --> Call method on events like click   --> (event)="method()" 
+               (iv) Two way data binding  --> Sync data both ways (input and output) --> [(ngmodel)]="data"
+
+7.
+authService ----> It is a service and it decides whether a user need to directed to a particular protected webpage or not. 
+		  isLoggedIn() ----> this is a method in authService(). It says whether the user isloggedIn or not. 
+				this.authService.isLoggedIn()
+		
+
+		  canActivate: [AuthGuard]: This tells Angular to use the AuthGuard to check if the user can access the DashboardComponent.
+			const routes: Routes = [
+ 			{ path: 'home', component: HomeComponent },
+  			{ path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard] },
+  			{ path: '**', redirectTo: 'home' }
+			];
+ 
+	Types of guards ----> CanActivate
+			      CanActivateChild
+			      CanDeactivate
+			      CanLoad
+
+
+All forms supports 2 way binding
+ngForms is an reference variable
+
+Lifecycle of hooks:
+	Lifecycle hooks in Angular let you run code at specific stages of a component’s life: initializing, updating, and destroying. They help manage setup, respond to changes, and clean up resources efficiently. For example, `ngOnInit` is used for initialization, while `ngOnDestroy` is used for cleanup before the component is removed.
+
+Pipes:
+	Pipes in Angular are like filters that change how data appears on your webpage.
+They are easy to use and save time by formatting data like dates, numbers, and text.
+
+
+ngModule decorator makes a class that holds the import decorator with necessity dependencies and make it available for components in application but in new version introduction of standalone we can import necessary module in the component itself instead of using ngModule
+
+
+Promise:
+	Promise allows us to handle asynchronous functions instead of waiting for the current operation to complete. It is like assuring that either the operation will be resolved or it will be rejected so u no need to wait for this operation to complete. It uses .then() method to handle the result and .catch() method to handle the error.
+		
+			this.getUserData()
+  			.then(data => {
+    				console.log('User data:', data);  // When the data is successfully received
+  			})
+  			.catch(error => {
+    				console.log('Error fetching user data:', error);  // If something goes wrong
+ 		 	}); 
+
+Observable:
+	Observable is used to handle asynchronous functions. It is like watching a live event or stream where we can data based on the live instead of getting the whole thing. It we subscribe for the observable we will get updates and if we dont want the updates we can unsubscribe it.
+
+	Observer ----> The one who gets the updates  
+	Observable --> The one who streams the live event to the observer
+	Subscribe ---> If observer subscribe to the observable the observer will get updates from observable
+	Unsubscribe -> If observer dont want updates from observable he can unsubscribe it
+
+

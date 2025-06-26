@@ -1,0 +1,200 @@
+JavaScript:
+
+It is a scripting language that makes a website interactive or adds behaviour to the websites.
+It's what makes buttons clickable, texts editable, data interactive, etc.
+In react, we use javascript code to create UI.
+
+1. Variables:
+	Variables are containers for storing data values like numbers, string or even functions and objects.
+	Simply we can say, they are boxes with labels that stores stuff.
+	
+	Keyword	   Scope	Can Reassign?	Hoisting     Use Case
+	var	Function scope	✅ Yes		✅ Yes	    Old JS code
+	let	Block scope	✅ Yes		❌ No	    Preferred
+	const	Block scope	❌ No		❌ No	    Constants
+
+	In real life example, we can say 'let' like a notebook where we can erase and rewrite but 'const' is like Birth certificate which is permanent and cant be changed.
+
+2. Hositing:
+	Hositing means javascript moves declartions to the top of the code during execution phase, before the code even runs. But it only declares it, not initialize it.
+    (i)	console.log(x);  // undefined
+	var x = 5;
+				Output: Undefined
+
+   (ii) var x;          // declaration is "hoisted" to the top
+	console.log(x); // undefined
+	x = 5;          // assignment stays in place
+
+				Output: Undefined
+
+  (iii) x = 5;
+	console.log(x);
+	var x;	
+				Output: 5
+
+	Only var supports hoisting. Both 'Let' and 'const' they can also be hoisted but they go into a "Temporal dead zone (TDZ)" which is a period between hoisting and actual declaration where let and const cant be accessed.
+
+	Simply, when the code runs, JavaScript hoists all let and const declarations to the top of their scope, but it doesn't initialize them like var (which gets undefined). Instead, it blocks access to them until the line where you actually declared them.
+
+	console.log(a); // ❌ ReferenceError
+	let a = 10;
+	
+	Why does this give an error?
+	Internally:
+		JS knows there's a let a — it's hoisted. But you're trying to use 'a' before the line where 	you declared it, so you’re in the "dead zone".
+
+	But in case of var, it is hoisted and initialized as 'undefined'.
+
+3. Data types:
+	JavaScript has 2 types of data types - Primitive and Reference data types.
+	(i) Primitive data types - They are immutable and they are stored by value.
+	    Number, string, Boolean, undefined, null, bigint and symbol --> these are primitive data types.
+		In this undefined - let x; (//no value yet) - Automatically assigned when not declared.
+			null - let x = null; - Manually declared it as empty.
+			symbol - Symbol("id") - Unique identifier
+
+	(ii) Reference data types - They are mutable and are stored by reference.
+	     Type	Example				 Description
+	     ====       =======				 ===========
+	    object	{ name: "Asro", age: 22 }	Key-value pairs
+	    array	[1, 2, 3]			Indexed list
+	    function	function greet() {}		Block of reusable code
+            date	new Date()			Date object
+
+	    Reference types are stored by memory reference, so even if two objects look the same, they’re 	different if not pointing to the same memory.
+
+
+4. "typeof" this operator returns the type of value or variable.
+
+		Value		typeof result
+	       =======   	=============
+	       "hello"		"string"
+	       21		"number"
+	       true		"boolean"
+	       undefined	"undefined"
+	       null		"object" ❌
+	       {}		"object"
+	       []		"object"
+	       function(){}	"function" ✅ (functions are special objects)
+
+    typeof null returns "object" - but null is not an object its just a historical bug.
+
+5. Type casting or Type conversion:
+	It is of 2 types --> Implicit Conversion (Automatic - by javascript)
+			     Explicit Conversion (Manually - by us)
+	(i) Implicit Conversion:
+		Here javascript automatically converts the data type.
+	console.log("5" + 1);     // "51"  → number 1 is converted to string
+	console.log("5" - 1);     // 4     → string "5" is converted to number
+	console.log(1 + true);    // 2     → true is converted to 1
+	console.log(1 + null);    // 1     → null becomes 0
+
+	**** If one operand is a string, + turns everything into a string. Other operators like -, *, / try 	to turn strings into numbers.
+
+	(ii) Explicit Conversion:
+		Here we should manually convert the data type.
+	let x = "42";
+	console.log(Number(x));  // 42  ✅ String to Number
+	let y = 99;
+	console.log(String(y));  // "99" ✅ Number to String
+	let z = "";
+	console.log(Boolean(z)); // false ❌ Empty string is false
+
+	Value		Number()	String()	Boolean()
+	"42"		42		"42"		true
+	"abc"		NaN ❌		"abc"		true
+	true		1		"true"		true
+	false		0		"false"		false
+	null		0		"null"		false
+	undefined	NaN		"undefined"	false
+	"" (empty)	0		  ""		false
+
+6. alert() --> It shows a popup box with a message.
+	      	let name = "Asro";
+		alert("Hey "+name+", Welcome home.");
+
+   prompt() --> It shows a popup with a textbox, asking for the user input. It returns the value typed by 	   the user as a string.
+		let username = prompt("What's your name?");
+		console.log("Hi "+username+ ", Welcome to our website");
+
+7. Functions --> Functions in javascript is of 3 types. They are
+			Named Functions
+			Anonymous Fucntions
+			Arrow Functions
+
+	(i)Named Functions:
+			It has a specific name and it can be reused in anywhere in the code. It can be 		called before or after initializing it (because of hoisting).
+		Syntax: 	
+			function funtionName (parameter) {
+			}
+
+		Example:
+			function greet (name) {
+				console.log("Hello "+ name);
+			}
+			greet("Asro");
+
+	    Function Expressions --> This is when we assign a function to a variable. 
+			const sayHi = function(name) {
+  			console.log("Hi, " + name + "!");
+			};
+			sayHi("Asro"); // Output: Hi, Asro!
+
+			*** Function expressions are not hoisted. So they cant be called before defining.
+				greet("Asro"); // ❌ Error
+				const greet = function(name) {
+  				console.log("Hello, " + name);
+				};
+
+	(ii) Anonymous Functions:
+			It is similar to Function expression but it is also a function without name.
+	    **All Anonyms functions are Function Expressions but not all function expressions are Anonymous 	      functions.
+				const greet = function() {
+				console.log("Hello!");
+				};
+				greet(); // Output: Hello!
+
+	
+	Difference between Function Expressions and Anonymous Functions:
+			Anonymous functions will never have name. 
+				const greet = function() {
+  				    console.log("Hello!");
+				};
+			Function Expressions might have name.
+				const greet = function sayHello() {
+				    console.log("Hello!");
+				};
+
+	(iii) Arrow Function:
+		Arrow functions are the shorter way to write function expressions.
+			let greet = (name) => {
+			  console.log("Hello " + name);
+			};
+			greet("Asro");
+		Arrow functions can be written in a shorter form if they had one parameter and one return 	      statement.
+			let square = num => num * num;
+			console.log(square(4));
+
+		There are 2 types of returns in arrow function. They are Explicit and Implicit return.
+		Explicit return --> We will be returning the result explicitly using return.
+				const add = (a, b) => {
+				  return a + b;
+				};
+				console.log(add(2, 3)); // Output: 5
+		Implicit return --> We will not be using return or "{}" these to get the results.
+				const add = (a, b) => a + b;
+				console.log(add(2, 3)); // Output: 5
+		
+		***Arrow function cannot be hoisted.
+
+	Actual difference between Regular functions and Arrow functions:
+		
+		Feature		Regular Function	   		Arrow Function
+		Syntax	      function funcName() {}			const func = () => {}
+		Hoisting	Hoisted (can use before declaration)	Not hoisted
+		this keyword	this refers to the object               this is lexically scoped, refers to
+				calling the function			where it was defined
+	     Argumentsobject	Has access to arguments			Doesn't have arguments
+	     Constructor use	Can be used as a constructor (new)	❌ Cannot be used as constructor
+
+

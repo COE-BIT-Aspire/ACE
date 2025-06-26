@@ -1,0 +1,47 @@
+ANGULAR
+
+injector .
+subject
+pipes ---------> comes under rxjs .
+services .
+observable 
+auth guard .
+types of auth guard .
+what is angular cli
+data binding in angular .
+directives 
+what is rx js
+what is lazy loading in angular
+angular life cycle hooks .
+forms 
+
+pipes .
+promise .
+observable .
+
+
+
+
+
+react
+
+higher order component
+
+mongoose
+
+what is mongodb
+queries..
+
+
+
+
+
+
+
+
+mongodb 8q
+plsql ---> functions, cursor, trigger, procedure, view --> 2q
+angular --> services, pipes, directives
+react --> hoc, routes
+aws --> e2c 
+azure --> basics

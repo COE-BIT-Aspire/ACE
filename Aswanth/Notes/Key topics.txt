@@ -1,0 +1,65 @@
+retrospective meeting - 
+standup meeting - Similar to standupcall
+canbin board -
+what is agile methodology?
+what is agile manifesto ??
+
+
+
+
+
+react - redux and redux saga
+angular - check on with angular 19 and angular 20 
+node - check on with node version 24
+
+
+
+canbin model 
+crystal model 
+
+
+asynchronous and synchronous 
+
+event loop in javascript
+
+clouser in javascript  - The inner function has the access to the outer scope or parent function or outer
+function's variables even after the execution of the outer function or parent function. The child function
+can even edit the variables of the parent class even after the execution of the parent class by remembering the variables and editing it.
+
+hoisting in javascript
+
+'this' keyword in arrow function
+
+what is memory leak and how we prevent memory leak
+
+difference between call, apply and bind in javascript
+
+difference between promise and async/await in javascript
+
+deepcopy and shallow copy
+
+symbol is a primtive data type or not?
+
+difference between var let and const and what is temporal deadzone
+
+difference between map and for each
+
+
+JavaScript, Angular and React all of these follows asynchronous operations.
+
+
+
+
+React:
+What is react reconsilation
+Difference between useCallback() and 
+What is memo 
+Why do we make use of keys in the list?
+Difference between props and states
+What is react context?
+
+What is the use of store, action and reducer in redux? ==> In whole application there can be only 1 store
+                                                          and its immutable. And react have n number of 							  reducer.
+What is flux? ==> Instead of reducer in redux, flux has dispatcher. Flux has n number of stores but only 1
+		dispatcher.
+

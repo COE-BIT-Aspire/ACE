@@ -1,0 +1,71 @@
+node:
+
+It is event driven
+
+Node js is single threaded (does everying one by one ) and non blocking (doesn't wait for any line)
+It has 4 inbuilt modules like os, filesync(fs), http, path.
+
+Modules - It is used to break huge code into small code that can used or reused anywhere in the application	
+
+1) os:
+os.userinfo() --------> shows us the userinfo
+os.uptime() --------> shows us the time
+os.() --------> 
+os.totalmem() --------> total disk space
+os.freemem() --------> remaining disk space
+
+
+2) filesync:
+for reading and writing 
+readFileSync -------->
+readFile -------->
+writeFile --------> non blocking --------> asynchronous
+writeFileSync --------> after assigning the path, it notes the data in the file that u mentioned --------> 			blocking --------> synchronous
+
+
+3) http:
+
+res.statusCode --------> gives us whether the server ran successfully or it is failed
+	res.statusCode = 200; --------> success 
+	res.statusCode = 400; --------> failure -- client side error
+	res.statusCode = 500; --------> failure -- server side error	
+
+res.setHeader --------> what type of content are we going to display
+
+
+a)method:
+get --------> to fetch the data
+put --------> to update data in server from client side
+post --------> for sending data from client to server
+delete -------->    
+
+4) path: 
+
+5) events:
+
+
+Asynchronous programming:
+Callback function - It is a function that is passed as an argument to another function that runs after a  asynchronous operation is completed.
+	
+function fetchData(callback) {
+  setTimeout(() => {
+    callback("Data fetched");
+  }, 2000);
+}
+
+fetchData((result) => {
+  console.log(result); // "Data fetched" after 2 seconds
+});
+
+
+Promises are objects. It has 2 parameter resolve(for indicating success) and reject(for indicating  failure). It uses .then() and .catch() methods. 
+		
+		"return new promise"
+
+	.then() ------> this method is called when the promise is successful and it handles resolve block.
+	.catch() -----> this method is called when the promise is failure and it handles reject block.
+
+
+async/await is a modern way to work with promises in JavaScript, making asynchronous code look and behave more like synchronous code. It helps in writing cleaner and more readable code when dealing with asynchronous operations.
+
+		"throw new error"

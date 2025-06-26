@@ -1,0 +1,49 @@
+Collection is a group of element and it can be either ordered or unordered. Collection is represented as a map or queue or set or stack or vector or list and all these are interfaces.
+
+size() - how many elements in the collection
+isEmpty()=>boolean - checks if any element are there 
+contains() - Check whether any paticular element is there or not
+containsAll() - To check all the elements in a collection is present in an another collection
+iterator() - Helps to iterate each and every element of an collection
+toArray() - To convert a collection into an array
+add() - To add a new element or value into a collection
+addAll() - To add all the elements of a collection into another collection
+remove() - To remove a particular object
+removeAll() - To remove all the elements in an collection
+retainAll() - To keep just a particular element in a collection and removing the rest of the elements in the collection
+clear() - To remove the entire collection
+
+LIST:
+	All the above methods are also applicable to list. Now the below mentioned are only applicable to LIST.
+
+set() - To replace a existing value in a collection
+get() - To get a specific value in a collection
+indexOf() - To extract a particular index value (mentioned inside the parenthesis) in the collection
+listIterator() - It has two methods --> next(), previous()
+lastIndexOf() - 
+subList() - To take a part of the value in the collection
+sort() - For sorting in ascending order 
+
+QUEUE:
+
+add() - To add a new element to the queue, if it is success it returns true if not it will return as a exception
+offer() - To add a element to the queue, if it is success it returns true if not it returns false
+remove() - To remove the head of the queue (because FIFO), if not it will return exception
+poll() - Same as remove(), if not it will return null 
+peek() - To retrieve the first element of the queue, if not it returns null
+
+
+MAP:
+
+size() - it is used to find the size of map elements
+isEmpty() - checks if the map is empty
+put(k,v) - To add elements to the map as key and value pair
+get(k) - To get the respective value of the given key
+remove(k) - To remove the key and value
+entrySet()=K,v - it returns all the key and value as pairs
+keyset()=k - returns only the keys in map
+values() - returns all the values in map
+putAll() - To add one map to another map
+clear() - To clear the map
+replace() - To replace the map
+putIfAbsent() - To add the key and value to the map if it is not present already in the map
