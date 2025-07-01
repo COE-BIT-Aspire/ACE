@@ -1,0 +1,2 @@
+Group By :
+It simply takes a column, collects all the rows with the same value in the column, and let's us to calculate something like total or average for each of those groups.
